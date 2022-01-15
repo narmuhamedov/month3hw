@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book_info</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css/' %}" />
+</head>
+
+<style>
+    body{
+        background-color: #86b7fe;
+    }
+
+    .c_v{
+        max-width: 900px;
+        margin-bottom: 40px;
+    }
+.c_v_a{
+    height: 300px;
+    object-fit: cover;
+}
+.ddd{
+    margin-bottom: 40px;
+
+}
+
+</style>
+<body>
+<button class="ddd"><a href="/books_lib/" class="btn-primary" style="text-decoration: none; color: #191c1f;
+ background-color: white" >Back</a></button>
+<div class="container c_v">
+    <h1>Наименование книги: <i style="color: red">{{ show.title }}</i></h1>
+  <img src="{{ show.image.url }}" class="card-img-top c_v_a" alt="...">
+    <div class="card">
+        <h5 class="card-header">Томы: <i style="color: #b02a37">{{ show.tom }}</i></h5>
+  <div class="card-body">
+      <h5 class="card-title">Жанр: <i style="color:darkred;">{{ show.genre }}</i></h5>
+      <p class="card-text">Описание: <i style="color: #b02a37">{{ show.descrip }}</i></p>
+    <p class="card-text">Дата Выхода: {{ show.date_write }}</p>
+  </div>
+</div>
+    
+</div>
+
+</body>
+</html>

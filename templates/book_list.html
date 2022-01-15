@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="shortcut icon" href="https://e7.pngegg.com/pngimages/750/461/png-clipart-instagram-application-logo-logo-computer-icons-instagram-miscellaneous-text.png">
+</head>
+<body bgcolor="#deb887">
+   <center>
+    <div>
+            {% for i in index %}
+
+                    <h2>{{ i.title }}</h2>
+                    <h4><i>{{ i.description }}</i></h4>
+                    <img src="{{ i.image.url }}" alt="" width="250" height="150">
+                    <br>
+                    Дата загрузки:
+                    <b>{{ i.created_date }}</b>
+                    <br>---------<br>
+                    Дата обновления:
+                    <b>{{ i.updated_date }}</b>
+                    <hr>
+            {% endfor %}
+    </div>
+</center>
+</body>
+</html>

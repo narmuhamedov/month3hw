@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>categorybook</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css/' %}" />
+</head>
+<style>
+    body{
+        background-color: #86b7fe;
+    }
+
+    .c_v{
+        max-width: 900px;
+        margin-bottom: 40px;
+    }
+
+</style>
+<body>
+<div class="container c_v">
+    <h1 class="container">Книги</h1>
+
+        {% for i in shows %}
+            <div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ i.title }}</h5>
+    <p class="card-text">{{ i.genre }}</p>
+    <a href="/book_lib/{{ i.id }}/" class="btn btn-primary">Next</a>
+  </div>
+</div>
+        {% endfor %}
+
+</div>
+</body>
+</html>
