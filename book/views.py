@@ -5,4 +5,4 @@ from . import models
 
 def book_blog(request):
     index = models.Book.objects.all()
-    return render(request, 'book_list.html', {'index':index})
+    return render(request, 'book_update.html', {'index':index})
