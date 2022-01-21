@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>addbook</title>
 </head>
-<body>
+<body bgcolor="aqua">
+<center>
+    <h2>Add</h2>
 <form action="/add-books/" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="add_book">
-
 </form>
-
+</center>
 </body>
 </html>
