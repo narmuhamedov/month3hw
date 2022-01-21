@@ -20,7 +20,8 @@ def add_book(request):
         form = forms.BookForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponse('Book created')
+            # return HttpResponse('Book created')
+            return redirect(reverse("books:book_lib_all"))
     else:
         form = forms.BookForm()
     return render(request, 'add_book.html', {'form': form})
@@ -40,4 +41,5 @@ def book_update(request, id):
 def book_delete(request, id):
      book_obj = get_object_or_404(models.BookCategory, id = id)
      book_obj.delete()
-     return HttpResponse('Book Deleted')
+     # return HttpResponse('Book Deleted')
+     return redirect(reverse("books:book_lib_all"))
