@@ -30,21 +30,39 @@
 <button class="ddd"><a href="/books_lib/" class="btn-primary" style="text-decoration: none; color: #191c1f;
  background-color: white" >Back</a></button>
 <div class="container c_v">
-    <h1>Наименование книги: <i style="color: red">{{ show.title }}</i></h1>
-  <img src="{{ show.image.url }}" class="card-img-top c_v_a" alt="...">
+    <h1>Наименование книги: <i style="color: red">{{ object.title }}</i></h1>
+  <img src="{{ object.image.url }}" class="card-img-top c_v_a" alt="...">
     <div class="card">
-        <h5 class="card-header">Томы: <i style="color: #b02a37">{{ show.tom }}</i></h5>
+        <h5 class="card-header">Томы: <i style="color: #b02a37">{{ object.tom }}</i></h5>
   <div class="card-body">
-      <h5 class="card-title">Жанр: <i style="color:darkred;">{{ show.genre }}</i></h5>
-      <p class="card-text">Описание: <i style="color: #b02a37">{{ show.descrip }}</i></p>
-    <p class="card-text">Дата Выхода: {{ show.date_write }}</p>
+      <h5 class="card-title">Жанр: <i style="color:darkred;">{{ object.genre }}</i></h5>
+      <p class="card-text">Описание: <i style="color: #b02a37">{{ object.descrip }}</i></p>
+    <p class="card-text">Дата Выхода: {{ object.date_write }}</p>
   </div>
 </div>
     
 </div>
+
+<div>
+    <h2>Comments:</h2>
+
+    <ul>
+        {% for i in object.book_lib_comment.all %}
+            <li>
+            {{ i.text }}
+            </li>
+            <li>
+            {{ i.created_date }}
+            </li>
+
+        {% endfor %}
+    </ul>
+
+</div>
+
 <center>
-<button type="button"><a href="/book_lib/{{ show.id }}/update/">Update</a></button>
-<button type="button"><a href="/book_lib/{{ show.id }}/delete/">Delete</a></button>
+<button type="button"><a href="/book_lib/{{ object.id }}/update/">Update</a></button>
+<button type="button"><a href="/book_lib/{{ object.id }}/delete/">Delete</a></button>
 </center>
 </body>
 </html>
