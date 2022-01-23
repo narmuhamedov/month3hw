@@ -22,9 +22,6 @@ class BookCategory(models.Model):
         return self.title
 
 
-
-
-
 class Book_libComent(models.Model):
     books = models.ForeignKey(BookCategory,on_delete=models.CASCADE,
                               related_name='book_lib_comment')
