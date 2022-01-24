@@ -5,4 +5,3 @@ class BookForm(forms.ModelForm):
     class Meta:
         model = models.BookCategory
         fields = "__all__"
-

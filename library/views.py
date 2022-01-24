@@ -98,8 +98,11 @@ class BookDeleteView(generic.DeleteView):
 
 
 
+
+
 # def book_delete(request, id):
 #      book_obj = get_object_or_404(models.BookCategory, id = id)
 #      book_obj.delete()
 #      # return HttpResponse('Book Deleted')
 #      return redirect(reverse("books:book_lib_all"))
+

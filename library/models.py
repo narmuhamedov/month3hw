@@ -31,3 +31,20 @@ class Book_libComent(models.Model):
 
     def __str__(self):
         return self.books.title
+
+class Expert(models.Model):
+    name = models.CharField(max_length=100)
+    activity = models.CharField(max_length=100)
+    info_exp = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class ExpertRecomendation(models.Model):
+    book_recomendation = models.TextField()
+    expert_selection = models.ForeignKey(Expert, on_delete=models.CASCADE)
+    book_selection = models.ForeignKey(BookCategory, on_delete=models.CASCADE, related_name='books')
+
+
+

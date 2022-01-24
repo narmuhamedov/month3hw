@@ -57,6 +57,17 @@
 
         {% endfor %}
     </ul>
+    <hr>
+</div>
+        <h2>Recomendation: </h2>
+        {% for i in object.books.all %}
+                        <hr>
+            <h3>name - {{ i.expert_selection.name }}</h3>
+            <h4>info about {{ i.name }}: {{ i.expert_selection.info_exp }}</h4>
+            <p><b>recomendation</b>: {{ i.book_recomendation }}</p>
+            <hr>
+        {% endfor %}
+<div>
 
 </div>
 
