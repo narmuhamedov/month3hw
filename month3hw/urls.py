@@ -8,6 +8,7 @@ urlpatterns = [
     path('', include('book.urls')),
     path('', include('library.urls')),
     path('', include('parser_film.urls')),
+    path('', include('users_hw.urls')),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

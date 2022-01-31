@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body bgcolor="#e9967a">
+<center>
+<h2>Авторизация</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" style="background-color: cornflowerblue">Log In</button>
+
+</form>
+    <br>
+    <button style="background-color: violet"><a href="/register_home_work/"style="text-decoration: none"><b>Зарегистрироватся</b></a></button>
+
+</center>
+
+</body>
+</html>

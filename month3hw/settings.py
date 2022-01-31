@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'book',
     'library',
     'parser_film',
+    'users_hw',
 ]
 
 MIDDLEWARE = [

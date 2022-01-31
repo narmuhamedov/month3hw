@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body bgcolor="#e9967a">
+<h2>Регистрация пользователя</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="register">
+</form>
+<hr>
+<h2>У вас уже есть аккаунт? Авторизуйтесь</h2>
+<button style="background-color: violet"><a href="/login/"style="text-decoration: none"><b>Войти</b></a></button>
+
+</body>
+</html>
