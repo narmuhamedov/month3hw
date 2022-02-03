@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProductCl</title>
+</head>
+<body>
+<div>
+<h2>Общий список одежды</h2>
+    <ul>
+         {% for i in object_list %}
+        <h2><a href="/productscl/{{ i.id }}">{{ i.name }}</a></h2>
+        {% endfor %}
+    </ul>
+</div>
+<button><a href="/productscl_man/{{ i.id }}">Мужская одежда</a></button>
+<button><a href="/productscl_woman/{{ i.id }}">Женская одежда</a></button>
+<button><a href="/productscl_childs/{{ i.id }}">Детская одежда</a></button>
+<button><a href="/productscl_unisex/{{ i.id }}">Общая одежда</a></button>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProductCl</title>
+</head>
+<body>
+<div>
+ <h2>Универсальный тег</h2>
+    <ul>
+         {% for i in object_list %}
+        <h2><a href="/productsclunisex/{{ i.id }}">{{ i.name }}</a></h2>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
